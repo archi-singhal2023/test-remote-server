@@ -4,7 +4,7 @@ import random, json
 mcp = FastMCP("Simple Calculator server")
 
 @mcp.tool
-def add(a: float, b: float) -> float:
+def add(a: int, b: int) -> int:
     """
     Add two numbers together.
     
@@ -19,7 +19,7 @@ def add(a: float, b: float) -> float:
     return a+b
 
 @mcp.tool
-def random_number(min_val: float=1, max_val:float = 100) -> float:
+def random_number(min_val: int=1, max_val: int = 100) -> int:
     """Generate a random number within a range.
 
     Args:
@@ -27,7 +27,7 @@ def random_number(min_val: float=1, max_val:float = 100) -> float:
         max_val: Maximum value(default: 100)
 
     Returns:
-        float: A random number between min_val and max_val
+        int: A random number between min_val and max_val
     """
     return random.randint(min_val, max_val)
 
